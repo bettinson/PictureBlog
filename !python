@@ -1,0 +1,19 @@
+import os
+
+def get_directory_names():
+    directory_names = []
+    for picture in os.listdir("pictures/"):
+        if picture:
+            directory_names.append("pictures/" + picture)
+
+    return directory_names
+
+html = ""
+for src in get_directory_names():
+    html += '<img src="' + src + '">' + "\n"
+
+f = open("index.html", "w")
+
+f.write(html)
+f.close()
+
