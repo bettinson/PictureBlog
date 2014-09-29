@@ -10,14 +10,20 @@ def get_directory_names():
 
     return directory_names
 
-html = ""
 
 pictures = get_directory_names()
-base_picture = Image.open(pictures[0])
-#base_width_height = base_picture.size
+
+# The first picture, because the [0] element is .DS_Store
+
+base_picture = Image.open(pictures[1])
+base_width_height = base_picture.size
+
+print base_width_height
+
+html = ""
 
 for src in get_directory_names():
-    if src != ".DS_Store":
+    if src != "pictures/.DS_Store":
         html += '<img src="' + src + '">' + "\n"
 
 f = open("index.html", "w")

@@ -1,2 +1,2 @@
 # Picture Blogger
-Generates an page of photos based on your `pictures` folder.
+Generates a page of photos based on the contents of your `pictures` folder.
